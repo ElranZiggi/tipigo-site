@@ -247,7 +247,7 @@ jQuery(function ($) {
 
     //blog slider
     $("#sliderBlog").owlCarousel({
-        items: 4,
+        items: 3,
         dots: false,
         margin: 30,
         rewind: !0,
@@ -261,10 +261,10 @@ jQuery(function ($) {
                 items:2
             },
             800:{
-                items:4
+                items:3
             },
             1200:{
-                items:4
+                items:3
             }
         }
     });

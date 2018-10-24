@@ -3475,5 +3475,15 @@ ul.blog-comments li p {
     transform: rotate(180deg);
 }
 
+.tipigo-color {
+    color: #14c085;
+}
 
+.sector-header-text{
+    font-size: 24px;
+    line-height: 2.1em;
+    text-align: center;
+    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
+    color: white;
 
+}

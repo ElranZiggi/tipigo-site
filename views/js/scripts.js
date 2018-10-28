@@ -250,7 +250,7 @@ jQuery(function ($) {
         items: 3,
         dots: false,
         margin: 30,
-        rewind: !0,
+        // rewind: !0,
         nav: true,
         navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
         responsive: {

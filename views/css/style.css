@@ -3048,6 +3048,7 @@ SECTION MARGIN
     display: block;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
+    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
 }
 
 .single-blog-article img{
@@ -3062,6 +3063,7 @@ SECTION MARGIN
 }
 .blog-post-content-area{
     padding: 20px;
+    border: 1px solid #bbb;
 }
 
 .blog-post-content-area h3{
@@ -3483,7 +3485,5 @@ ul.blog-comments li p {
     font-size: 24px;
     line-height: 2.1em;
     text-align: center;
-    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
     color: white;
-
 }

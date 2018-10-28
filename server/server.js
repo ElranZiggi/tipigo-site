@@ -8,7 +8,12 @@ app.engine('html', require('hbs').__express);
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(express.static('views'));
+
+if (port == 3000){
+  app.use(express.static('../views'));
+} else {
+  app.use(express.static('views'));
+}
 
 app.get('/',(req,res) =>{
 	res.render('index.html');

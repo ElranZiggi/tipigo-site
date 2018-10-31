@@ -1042,7 +1042,8 @@ SECTION MARGIN
 
     .navbar.top-nav-collapse {
         padding: 0;
-        background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%)
+        background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
+        box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
     }
 
     .navbar .navbar-brand {
@@ -1181,7 +1182,7 @@ SECTION MARGIN
 }
 
 .section-circle .shape-primary {
-    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%)
+    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
 }
 
 .section-circle .shape-primary :nth-child(1) {
@@ -1315,7 +1316,7 @@ SECTION MARGIN
 }
 
 .section-circle .shape-style-1.shape-primary {
-    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%)
+    background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
 }
 
 
@@ -3481,9 +3482,13 @@ ul.blog-comments li p {
     color: #14c085;
 }
 
-.sector-header-text{
+.sector-header-text { 
     font-size: 24px;
     line-height: 2.1em;
     text-align: center;
     color: white;
+}
+
+.capitalize { 
+    text-transform: capitalize; 
 }

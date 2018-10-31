@@ -3049,7 +3049,7 @@ SECTION MARGIN
     display: block;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
-    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
+    background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
 }
 
 .single-blog-article img{
@@ -3332,8 +3332,9 @@ ul.blog-comments li p {
     box-shadow: 0 1px 2px rgba(212, 212, 212, 0.35);
 }
 .footer-social-list ul li a:hover{
-    background: linear-gradient(150deg,#281483 15%,#8f6ed5 70%,#d782d9 94%);
+    background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
 }
+
 .footer-social-list ul li a:hover i{
     color: #fff;
 }
@@ -3344,7 +3345,7 @@ ul.blog-comments li p {
     text-align: center;
     vertical-align: middle;
     font-size: 16px;
-    background: linear-gradient(150deg,#281483 15%,#8f6ed5 70%,#d782d9 94%);
+    background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
     -webkit-background-clip: text;
     color: transparent;
     transition: all 0.3s ease-in;
@@ -3388,7 +3389,7 @@ ul.blog-comments li p {
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #281483;
+    border-top-color: #14bf85;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
@@ -3401,7 +3402,7 @@ ul.blog-comments li p {
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #8f6ed5;
+    border-top-color: #3d67c6;
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
 }
@@ -3414,7 +3415,7 @@ ul.blog-comments li p {
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #d782d9;
+    border-top-color: #4a4bdb;
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }

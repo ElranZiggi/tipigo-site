@@ -71,8 +71,8 @@ jQuery(function ($) {
         items: 1
     });
     var u = $(".mobile-slider"),
-        p = $("#next"),
-        m = $("#prev");
+    p = $("#next"),
+    m = $("#prev");
     p.on("click", function() {
         u.trigger("next.owl.carousel", [400])
     }); m.on("click", function() {
@@ -222,7 +222,7 @@ jQuery(function ($) {
     });
 
     /* list_screen_slide Active
-     =============================*/
+    =============================*/
     $('.list_screen_slide').owlCarousel({
         loop: true,
         responsiveClass: true,
@@ -308,5 +308,9 @@ jQuery(function ($) {
         });
 
     }());
+
+    $('[data-toggle="popover"]').popover({
+      // trigger: 'focus'
+  });
 
 }); // JQuery end

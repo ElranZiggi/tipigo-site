@@ -188,8 +188,8 @@ b, strong {
 
 .softo-solid-btn {
     padding: 5px 30px;
-    border: 2px solid #281483;
-    background-color: #281483;
+    border: 2px solid #4a4bdb;
+    background-color: #4a4bdb;
     color: #fff;
     font: 600 14px/30px 'Montserrat', sans-serif;
     -webkit-transition: all .3s ease-out;
@@ -2113,7 +2113,7 @@ SECTION MARGIN
     margin-top:180px;
 }
 .video-play-button a:hover{
-    background: #281483;
+    background: #4a4bdb;
     color: #fff;
 }
 .video-play-button a:hover span{
@@ -3119,7 +3119,7 @@ SECTION MARGIN
 #sliderBlog .owl-nav button:focus, #sliderBlog .owl-nav button:hover{
     color:#fff;
     outline: none;
-    background: #281483;
+    background: #4a4bdb;
 }
 #sliderBlog .owl-nav button:focus span, #sliderBlog .owl-nav button:hover span{
     color: #fff;
@@ -3472,7 +3472,7 @@ ul.blog-comments li p {
 #toTop span {
     display: block;
     position: relative;
-    background: #281483;
+    background: #4a4bdb;
     padding: 5px 12px;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -3492,4 +3492,16 @@ ul.blog-comments li p {
 
 .capitalize { 
     text-transform: capitalize; 
+}
+
+.info_button{
+    background-color: transparent;
+}
+
+.info_button:focus {
+    outline: none;
+}
+
+#performance{
+    padding-bottom: 0;
 }

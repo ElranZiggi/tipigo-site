@@ -3050,7 +3050,8 @@ SECTION MARGIN
     display: block;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
-    background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
+    /*background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);*/
+    background: #959595;
     text-align: center;
 }
 
@@ -3491,7 +3492,7 @@ ul.blog-comments li p {
 }
 
 .sector-header-text { 
-    font-size: 24px;
+    font-size: 21px;
     line-height: 2.1em;
     text-align: center;
     color: white;
@@ -3531,4 +3532,9 @@ ul.blog-comments li p {
     .video-play-button{
             margin-bottom: 130px;
     }
+}
+
+.success-background{
+    color: white;
+    background-color: #28a745;
 }

@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
+var compression = require('compression');
+
 
 var app = express();
 app.set('view engine', 'html');
@@ -17,12 +19,13 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-
 if (port == 3000){
   app.use(express.static('../views'));
 } else {
   app.use(express.static('views'));
 }
+
+app.use(compression());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

@@ -3074,6 +3074,7 @@ SECTION MARGIN
 .blog-post-content-area{
     padding: 20px;
     border: 1px solid #bbb;
+    background: #ddf6ee;
 }
 
 .blog-post-content-area h3{

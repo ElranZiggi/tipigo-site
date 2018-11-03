@@ -948,8 +948,8 @@ SECTION MARGIN
 ============================================================*/
 
 .navbar {
-    border-bottom: 1px solid #281483;
-    background-color: #281483;
+    border-bottom: 1px solid #4a4bdb;
+    background-color: #4a4bdb;
 }
 
 .navbar .nav.navbar-nav {
@@ -960,7 +960,7 @@ SECTION MARGIN
 }
 
 .navbar .navbar-collapse {
-    border-top: 1px solid #281483;
+    border-top: 1px solid #4a4bdb;
 }
 
 /* Logo */
@@ -1002,7 +1002,7 @@ SECTION MARGIN
 
 /* Mobile menu toggle button */
 .navbar .navbar-toggle.collapsed {
-    border: 1px solid #281483;
+    border: 1px solid #4a4bdb;
     background: transparent;
 }
 
@@ -2110,7 +2110,7 @@ SECTION MARGIN
     animation: ripple-white 1s linear infinite;
     -webkit-transition: .5s linear;
     background: #fff;
-    margin-top:180px;
+    /*margin-top:180px;*/
 }
 .video-play-button a:hover{
     background: #4a4bdb;
@@ -3042,7 +3042,8 @@ SECTION MARGIN
     border-radius: 4px;
     display: block;
     overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+    /*box-shadow: 0 1px 2px rgba(0,0,0,0.12);*/
+    margin: 20px 0 10px 0;
 }
 
 .blog-post-img-thumb{
@@ -3050,13 +3051,19 @@ SECTION MARGIN
     overflow: hidden;
     border-radius: 4px 4px 0 0;
     background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
+    text-align: center;
 }
 
 .single-blog-article img{
     -webkit-transition:all 0.3s ease-in;
     transition: all 0.3s ease-in;
     -webkit-transform:scale(1);
-    transform:scale(1)
+    transform:scale(1);
+        vertical-align: middle;
+        margin-bottom: 7px;
+        height:35px;
+        width: 35px;
+
 }
 .single-blog-article:hover img{
     -webkit-transform:scale(1.12);
@@ -3504,4 +3511,25 @@ ul.blog-comments li p {
 
 #performance{
     padding-bottom: 0;
+}
+
+/*    .row-vertical-align {
+        display: flex;
+        align-items: center;
+    }*/
+
+/* Small devices */
+
+@media (min-width: 769px) {
+    .row-vertical-align {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .video-play-button a {
+        bottom: 70px;
+    }
 }

@@ -307,6 +307,11 @@ jQuery(function ($) {
             return false;
         });
 
+        $('#logo').on('click',function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+
     }());
 
     $('[data-toggle="popover"]').popover({

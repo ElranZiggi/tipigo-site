@@ -3544,3 +3544,7 @@ ul.blog-comments li p {
 .popover-content{
     color: black;
 }
+
+#logo{
+    cursor: pointer;
+}

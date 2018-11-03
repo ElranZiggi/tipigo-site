@@ -948,8 +948,9 @@ SECTION MARGIN
 ============================================================*/
 
 .navbar {
-    border-bottom: 1px solid #4a4bdb;
-    background-color: #4a4bdb;
+    /*border-bottom: 1px solid #4a4bdb;*/
+    /*background-color: #4a4bdb;*/
+    background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);
 }
 
 .navbar .nav.navbar-nav {
@@ -2099,9 +2100,9 @@ SECTION MARGIN
     position: relative;
     z-index: 2;
     color: #281483;
-    height: 70px;
-    width: 70px;
-    line-height: 70px;
+    height: 85px;
+    width: 85px;
+    line-height: 85px;
     text-align: center;
     margin: auto;
     border-radius: 50%;
@@ -3041,7 +3042,7 @@ SECTION MARGIN
     background: #fff;
     border-radius: 4px;
     display: block;
-    overflow: hidden;
+    overflow: visible;
     /*box-shadow: 0 1px 2px rgba(0,0,0,0.12);*/
     margin: 20px 0 10px 0;
 }
@@ -3062,8 +3063,8 @@ SECTION MARGIN
     transform:scale(1);
         vertical-align: middle;
         margin-bottom: 7px;
-        height:35px;
-        width: 35px;
+        height:30px;
+        width: 30px;
 
 }
 .single-blog-article:hover img{
@@ -3492,7 +3493,7 @@ ul.blog-comments li p {
 }
 
 .sector-header-text { 
-    font-size: 21px;
+    font-size: 20px;
     line-height: 2.1em;
     text-align: center;
     color: white;
@@ -3537,4 +3538,8 @@ ul.blog-comments li p {
 .success-background{
     color: white;
     background-color: #28a745;
+}
+
+.popover-content{
+    color: black;
 }

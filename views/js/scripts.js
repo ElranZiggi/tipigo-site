@@ -313,4 +313,26 @@ jQuery(function ($) {
       // trigger: 'focus'
   });
 
+    $(document).ready(function(){
+        $("#myForm").submit(function(event){
+            event.preventDefault();
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var company = $('#company').val();
+            var message = $('#message').val();
+
+            $.ajax({
+                method: 'post',
+                url: '/submit',
+                data: JSON.stringify({ name: name, email: email, phone: phone, company: company, message: message}),
+                contentType: 'application/json',
+                success: function(data) {
+                    $('#form-success-message').css("display", "block");
+                }
+
+            })
+        });
+    });
+
 }); // JQuery end

@@ -17,7 +17,8 @@
     "express": "^4.14.0",
     "hbs": "^4.0.1",
     "mongodb": "^2.2.5",
-    "mongoose": "^4.5.9"
+    "mongoose": "^4.5.9",
+    "nodemailer": "^4.6.8"
   },
   "devDependencies": {
     "expect": "^23.6.0",

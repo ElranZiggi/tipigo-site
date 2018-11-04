@@ -3516,6 +3516,10 @@ ul.blog-comments li p {
     padding-bottom: 0;
 }
 
+#faq{
+    padding-bottom: 0;
+}
+
 /*    .row-vertical-align {
         display: flex;
         align-items: center;

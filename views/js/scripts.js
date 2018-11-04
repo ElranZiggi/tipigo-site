@@ -315,7 +315,7 @@ jQuery(function ($) {
     }());
 
     $('[data-toggle="popover"]').popover({
-      // trigger: 'focus'
+      trigger: 'focus'
   });
 
     $(document).ready(function(){

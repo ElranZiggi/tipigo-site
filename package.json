@@ -16,10 +16,12 @@
     "body-parser": "^1.15.2",
     "compression": "^1.7.3",
     "express": "^4.14.0",
+    "express-recaptcha": "^4.1.1",
     "hbs": "^4.0.1",
     "mongodb": "^2.2.5",
     "mongoose": "^4.5.9",
-    "nodemailer": "^4.6.8"
+    "nodemailer": "^4.6.8",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "expect": "^23.6.0",

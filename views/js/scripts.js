@@ -326,11 +326,14 @@ jQuery(function ($) {
             var phone = $('#phone').val();
             var company = $('#company').val();
             var message = $('#message').val();
+            var g_recaptcha_response = $('#g-recaptcha-response').val();
+
+
 
             $.ajax({
                 method: 'post',
                 url: '/submit',
-                data: JSON.stringify({ name: name, email: email, phone: phone, company: company, message: message}),
+                data: JSON.stringify({ name: name, email: email, phone: phone, company: company, message: message, g_recaptcha_response:g_recaptcha_response}),
                 contentType: 'application/json',
                 success: function(data) {
                     $('#form-success-message').css("display", "block");
@@ -338,6 +341,12 @@ jQuery(function ($) {
 
             })
         });
+    });
+
+    $("#tmp-opportunity").addClass("bullish");
+
+    $("#bull-bear").click(function(){
+        $("#tmp-opportunity").toggleClass("bearish bullish");
     });
 
 }); // JQuery end

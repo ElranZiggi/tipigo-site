@@ -19,9 +19,9 @@ var transporter = nodemailer.createTransport({
 });
 
 if (port == 3000){
-  app.use(express.static(path.join(__dirname, '../views')));
+  app.use(express.static('../views'));
 } else {
-  app.use(express.static(path.join(__dirname, '/views')));
+  app.use(express.static('/views'));
 }
 
 app.use(compression());
@@ -70,7 +70,7 @@ app.post('/submit',function(req,res){
   //   console.log("response: " + request.response);
   //   console.log("remoteip: " + request.remoteip);
   // });
-  
+
   res.status(200).json({status:"ok"})
 });
 

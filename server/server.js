@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
 if (port == 3000){
   app.use(express.static('../views'));
 } else {
-  app.use(express.static('../views'));
+  app.use(express.static('views'));
 }
 
 app.use(compression());

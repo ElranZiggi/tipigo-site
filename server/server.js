@@ -1,10 +1,10 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
-var compression = require('compression');
-var path = require('path');
-
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const compression = require('compression');
+const path = require('path');
+const request = require('request');
+const app = express();
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 
@@ -19,7 +19,7 @@ var transporter = nodemailer.createTransport({
 });
 
 if (port == 3000){
-  app.use(express.static('../views'));
+  app.use(express.static('views'));
 } else {
   app.use(express.static('views'));
 }
@@ -27,15 +27,46 @@ if (port == 3000){
 app.use(compression());
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/',(req,res) =>{
 	res.render('index.html');
 });
 
-app.get('/opportunity',(req,res) =>{
-  res.render(path.join(__dirname, '../views/opportunity.html'));
+app.get('/opportunity',(req,res) => {
+  // 5c19568115b95664728b4575
+  console.log("farams:  " + req.query.id);
+  getAlertbyId(req.query.id).then(alert => {
+    if (alert.error_code) {
+      // res.render(`<h1>Not Found</h1>`)
+      res.redirect('/')
+    } else {
+      // {"symbol":"gpn","upside":"9.22","analyst":"Nomura","success_percentage":96,"success_month_back":6,"sector":"Financials","bullbear":"bearish"}
+      alert.symbol = alert.symbol.toUpperCase();
+      alert['month'] = alert.success_month_back > 1 ? "months" : "month"
+      alert['bullbear_text'] = alert.bullbear.replace("b", "B");
+      res.render(path.join(__dirname, '../views/opportunity.html'), alert);
+    }
+  })
+  // res.render(path.join(__dirname, '../views/opportunity.html'),{omg: 'ooo my fucking god'});
 });
+
+const getAlertbyId = (id) => {
+  return new Promise(resolve => {
+    request({
+      url: 'https://app.tipigo.com/finance/get_alert_for_tizer',
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      json: {id: id}
+      //  body: JSON.stringify(requestData)
+    }, (error, resp, body) => {
+      console.log(JSON.stringify(body));
+      resolve(body)
+    })
+  })
+} 
 
 
 app.post('/submit',function(req,res){

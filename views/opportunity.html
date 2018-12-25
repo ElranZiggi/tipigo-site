@@ -7,6 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<meta property="og:title" content="title" />
+	<meta property="og:description" content="description" />
+	<meta property="og:image" content="thumbnail_image" />
+
 	<!--title-->
 	<title>Tipigo - Fundamentally Different</title>
 
@@ -14,7 +18,7 @@
 	<!-- <link rel="icon" href="img/fav.png" type="image/png" sizes="16x16"> -->
 
 	<!-- font-awesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
 
 	<!--themify icon-->
 	<link rel="stylesheet" href="css/themify-icons.css">
@@ -47,7 +51,7 @@
 
 
 <body>
-	<button id="bull-bear" type="button" class="btn btn-primary">Change bullish-bearish</button>
+	<!-- <button id="bull-bear" type="button" class="btn btn-primary">Change bullish-bearish</button> -->
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -79,8 +83,8 @@
 						<div class="hero-content-wrap">
 							<div class="hero-content">
 								<p class="gray-text">Shared opportunity by Benzinga Analyst Ideas:</p>
-								<h1 class="gray-text">BMO Capital is <strong id="tmp-opportunity" class="">Bullish</strong> on CRT (upside: 12%)</h1>
-								<p class="gray-text">BMO Capital has 100% success in the last 12 months in similar Healthcare stocks.</p>
+								<h1 class="gray-text">{{analyst}} is <strong id="tmp-opportunity" class="{{bullbear}}">{{bullbear_text}}</strong> on {{symbol}} (upside: {{upside}}%)</h1>
+								<p class="gray-text">{{analyst}} has {{success_percentage}}% success in the last {{success_month_back}} {{month}} in similar {{sector}} stocks.</p>
 								<div id="download-section">
 									<h4>Stay ahead of the market</h4>
 									<p class="gray-text"><span class="glyphicon  glyphicon-menu-right" aria-hidden="true"></span>
@@ -157,6 +161,11 @@
 		<!--end footer section-->
 
 	</div><!--end main content inner-->
+
+	<!-- extra data from server to js -->
+	<div id="additional-data" style="display: none;"
+		symbol="{{symbol}}"
+	></div>
 </div>
 <!--end main container -->
 
@@ -191,6 +200,8 @@
 
 <!-- custom script -->
 <script src="js/scripts.js"></script>
+<!-- alone addition to opportunity page -->
+<script src="js/opportunity.js"></script>
 
 </body>
 </html>

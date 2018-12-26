@@ -2,7 +2,7 @@
   "name": "node-todo-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,8 @@
     "mongodb": "^2.2.5",
     "mongoose": "^4.5.9",
     "nodemailer": "^4.6.8",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "expect": "^23.6.0",

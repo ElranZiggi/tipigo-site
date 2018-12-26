@@ -18,13 +18,19 @@
 //  9. typed
 // 10. back to top
 
+function doneLoading() {
+    $('#preloader').delay(200).fadeOut('fade');
+}
+
 jQuery(function ($) {
 
     'use strict';
 
     //  1. preloader
     $(window).ready(function() {
-        $('#preloader').delay(200).fadeOut('fade');
+        if ($('#main').css('display') != 'none' && $('#main').css('display') != 'hidden') {
+           doneLoading();
+        }
     });
 
     // var str = $.param( params );   
@@ -36,10 +42,12 @@ jQuery(function ($) {
 
     //  3. navbar or menu
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        if ($(".navbar").length > 0 ) {
+            if ($(".navbar").offset().top > 50) {
+                $(".navbar-fixed-top").addClass("top-nav-collapse");
+            } else {
+                $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            }
         }
     });
 

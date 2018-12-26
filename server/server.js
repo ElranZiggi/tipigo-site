@@ -33,9 +33,18 @@ app.get('/',(req,res) =>{
 	res.render('index.html');
 });
 
+// app.get('/opportunity',(req,res) =>{
+//   res.render(path.join(__dirname, '../views/opportunity.html'));
+// });
+
 app.get('/opportunity',(req,res) =>{
-  res.render(path.join(__dirname, '../views/opportunity.html'));
+  // res.render(path.join(__dirname, '../views/opportunity.html'));
+  res.render(path.join(__dirname, '../views/opportunity'));
+    console.log(req.query.id)
+  // res.locals.id=req.params.id;
+  // console.log(res.locals);
 });
+
 
 
 app.post('/submit',function(req,res){

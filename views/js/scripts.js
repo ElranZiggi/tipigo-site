@@ -27,6 +27,9 @@ jQuery(function ($) {
         $('#preloader').delay(200).fadeOut('fade');
     });
 
+    // var str = $.param( params );   
+    console.log($.param.id)
+
     //  2. easeScroll
     $("html").easeScroll();
 
@@ -348,5 +351,6 @@ jQuery(function ($) {
     $("#bull-bear").click(function(){
         $("#tmp-opportunity").toggleClass("bearish bullish");
     });
+
 
 }); // JQuery end

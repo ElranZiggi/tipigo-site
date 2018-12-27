@@ -45,7 +45,8 @@ app.get('/opportunity',(req,res) => {
       // {"symbol":"gpn","upside":"9.22","analyst":"Nomura","success_percentage":96,"success_month_back":6,"sector":"Financials","bullbear":"bearish"}
       alert.symbol = alert.symbol.toUpperCase();
       alert['month'] = alert.success_month_back > 1 ? "months" : "month"
-      alert['bullbear_text'] = alert.bullbear.replace("b", "B");
+      alert['bullbear_text'] = alert.bullbear.replace("b", "B")
+      alert['id'] = req.query.id
       res.render(path.join(__dirname, '../views/opportunity.html'), alert);
     }
   })

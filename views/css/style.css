@@ -30,7 +30,7 @@ Author: https://themeforest.net/user/htmllover/portfolio
 
 /* -----------------------------------------
 			   01.	RESET CSS
-               -------------------------------------------- */
+            -------------------------------------------- */
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -228,11 +228,11 @@ html{
             }
 
             .form-control:focus {
-             outline: none;
-             box-shadow: none;
-         }
+               outline: none;
+               box-shadow: none;
+           }
 
-         .form-group {
+           .form-group {
             margin-bottom: 20px;
         }
 
@@ -954,7 +954,7 @@ SECTION MARGIN
                 .navbar {
                     /*border-bottom: 1px solid #4a4bdb;*/
                     /*background-color: #4a4bdb;*/
-                        background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%);
+                    background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%);
                 }
 
                 .navbar .nav.navbar-nav {
@@ -1021,9 +1021,9 @@ SECTION MARGIN
                     .navbar .nav.navbar-nav li a{
                         padding: 8px 15px;
                     }
-
-
                 }
+
+
 
                 @media (min-width: 768px){
                     .navbar {
@@ -3486,8 +3486,8 @@ margin-right: 15px;
 
 /*====================================
 			 16. BACK TO TOP CSS
-             ====================================*/
-             #toTop {
+            ====================================*/
+            #toTop {
                 position: fixed;
                 bottom: 40px;
                 right: 40px;
@@ -3630,7 +3630,7 @@ transform: scale(1);*/
 }
 
 .img-responsive {
-   margin: 0 auto;
+ margin: 0 auto;
 }
 
 .gray-text{
@@ -3793,31 +3793,48 @@ a.btn.softo-solid-btn:focus {
 }
 
 .tcontent{
-        padding: 0px 0px 100px 0;
+    padding: 0px 0px 100px 0;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   /* Place the timelime to the left */
   .timeline::after {
-  left: 31px;
+      left: 31px;
   }
-  
+
+
+
   /* Full-width containers */
   .tcontainer {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
   }
-  
+
 
   /* Make sure all circles are at the same spot */
   .left::after, .right::after {
-  left: 15px;
+      left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .right {
-  left: 0%;
+      left: 0%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .headerBox:after{
+    width: 21.5% !important;
+}
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 769px) {
+  .headerBox:after{
+    width: 16.5% !important;
+}
+}
+
+

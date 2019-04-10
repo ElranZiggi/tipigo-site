@@ -20,18 +20,30 @@
 
 function doneLoading() {
     $('#preloader').delay(200).fadeOut('fade');
+
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+
 }
 
 jQuery(function ($) {
 
     'use strict';
 
+    $( '#myNavbar .navbar-nav a' ).on( 'click', function () {
+        $( '#myNavbar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+        $( this ).parent( 'li' ).addClass( 'active' );
+    });
+
     //  1. preloader
     $(window).ready(function() {
         if ($('#main').css('display') != 'none' && $('#main').css('display') != 'hidden') {
-           doneLoading();
-        }
-    });
+         doneLoading();
+     }
+ });
 
     // var str = $.param( params );   
     console.log($.param.id)
@@ -61,6 +73,16 @@ jQuery(function ($) {
             event.preventDefault();
         });
     });
+
+    $(function() {
+        $(document).on('click', 'a.page-scroll.learn-more', function(event) {
+            $( '#myNavbar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+            $($( '#myNavbar .navbar-nav' ).find( 'li' )[1]).addClass('active');
+        });
+    });
+
+
+
     // closes the responsive menu on menu item click
     $(".navbar-nav li a").on("click", function(event) {
         if (!$(this).parent().hasClass('dropdown'))
@@ -315,6 +337,8 @@ jQuery(function ($) {
 
         $('#toTop').on('click',function(){
             $("html, body").animate({ scrollTop: 0 }, 600);
+            $( '#myNavbar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+            $($( '#myNavbar .navbar-nav' ).find( 'li' )[0]).addClass('active');
             return false;
         });
 
@@ -359,6 +383,18 @@ jQuery(function ($) {
     $("#bull-bear").click(function(){
         $("#tmp-opportunity").toggleClass("bearish bullish");
     });
+
+    // $('.count').each(function () {
+    //     $(this).prop('Counter',0).animate({
+    //         Counter: $(this).text()
+    //     }, {
+    //         duration: 2000,
+    //         easing: 'swing',
+    //         step: function (now) {
+    //             $(this).text(now.toFixed(1));
+    //         }
+    //     });
+    // });
 
 
 }); // JQuery end

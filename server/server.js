@@ -70,42 +70,57 @@ const getAlertbyId = (id) => {
   })
 } 
 
+app.post('/submit',function(req,res) {
+  verifyRecaptcha(req.body.g_recaptcha_response).then(captcha_res => {
+    if (captcha_res.success) {
+      var user = {
+        name: req.body.name ,
+        email: req.body.email ,
+        phone: req.body.phone ,
+        company: req.body.company ,
+        text: req.body.message ,
+        g_recaptcha_response: req.body.g_recaptcha_response,
+      }
 
+      var mailOptions = {
+        from: 'hello@tipigo.com',
+        to: 'elran@tipigo.com, nechemia@tipigo.com, support@tipigo.com',
+        subject: 'New contact us from Tipigo.com',
+        text: 'name :' + req.body.name + ' ,email: ' + req.body.email + ' ,phone: ' + req.body.phone + ' ,company: ' + req.body.company + ' ,message: ' + req.body.message, 
+      };
 
-app.post('/submit',function(req,res){
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
 
-  var user = {
-    name: req.body.name ,
-    email: req.body.email ,
-    phone: req.body.phone ,
-    company: req.body.company ,
-    text: req.body.message ,
-    g_recaptcha_response: req.body.g_recaptcha_response,
-  }
+      // app.post('https://www.google.com/recaptcha/api/siteverify?secret=6LftaYIUAAAAALC91xtYZuSuyDLMTN9jRdt8m1CD&response=' + user.g_recaptcha_response + '&remoteip=' + req.connection.remoteAddress, function(request,response){
+      //   console.log("secret: " + request.secret);
+      //   console.log("response: " + request.response);
+      //   console.log("remoteip: " + request.remoteip);
+      // });
 
-  var mailOptions = {
-    from: 'hello@tipigo.com',
-    to: 'elran@tipigo.com, nechemia@tipigo.com, support@tipigo.com',
-    subject: 'New contact us from Tipigo.com',
-    text: 'name :' + req.body.name + ' ,email: ' + req.body.email + ' ,phone: ' + req.body.phone + ' ,company: ' + req.body.company + ' ,message: ' + req.body.message, 
-  };
-
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
+      res.status(200).json({status:"ok"})
     }
-  });
-
-  // app.post('https://www.google.com/recaptcha/api/siteverify?secret=6LftaYIUAAAAALC91xtYZuSuyDLMTN9jRdt8m1CD&response=' + user.g_recaptcha_response + '&remoteip=' + req.connection.remoteAddress, function(request,response){
-  //   console.log("secret: " + request.secret);
-  //   console.log("response: " + request.response);
-  //   console.log("remoteip: " + request.remoteip);
-  // });
-
-  res.status(200).json({status:"ok"})
+  })
 });
+
+const verifyRecaptcha = token => new Promise(resolve => {
+  console.log(`\n${token}\n`)
+  request({
+    url: 'https://www.google.com/recaptcha/api/siteverify',
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: `secret=6Ld-Zp0UAAAAAMH-oQm4qPnDv5k8oGLotE3EbMJg&response=${token}`
+  }, (error, resp, body) => {
+    resolve(body)
+  })
+})
 
 app.listen(port, () => {
   console.log(`Started at port ${port}`);

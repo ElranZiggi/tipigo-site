@@ -104,6 +104,8 @@ app.post('/submit',function(req,res) {
       // });
 
       res.status(200).json({status:"ok"})
+    } else {
+      res.status(401).json({status:"01101110 01101111 00100000 01110111 01100001 01111001"})
     }
   })
 });

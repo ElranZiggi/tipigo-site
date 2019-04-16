@@ -72,7 +72,6 @@ const getAlertbyId = (id) => {
 
 app.post('/submit',function(req,res) {
   verifyRecaptcha(req.body.g_recaptcha_response).then(captcha_res => {
-    console.log("captcha response::: \n", JSON.stringify(captcha_res))
     if (captcha_res.success) {
       var user = {
         name: req.body.name ,
@@ -87,7 +86,7 @@ app.post('/submit',function(req,res) {
         from: 'hello@tipigo.com',
         to: 'elran@tipigo.com, nechemia@tipigo.com, support@tipigo.com, alonebashan@gmail.com',
         subject: 'New contact us from Tipigo.com',
-        text: 'name :' + req.body.name + ' ,email: ' + req.body.email + ' ,phone: ' + req.body.phone + ' ,company: ' + req.body.company + ' ,message: ' + req.body.message, 
+        text: 'name :' + req.body.name + ' ,\nemail: ' + req.body.email + ' ,\nphone: ' + req.body.phone + ' ,\ncompany: ' + req.body.company + ' ,\nmessage: ' + req.body.message, 
       };
 
       transporter.sendMail(mailOptions, function(error, info){

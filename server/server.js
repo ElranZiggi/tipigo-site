@@ -121,7 +121,7 @@ const verifyRecaptcha = token => new Promise(resolve => {
     },
     body: `secret=6Ld-Zp0UAAAAAMH-oQm4qPnDv5k8oGLotE3EbMJg&response=${token}`
   }, (error, resp, body) => {
-    resolve(body)
+    resolve(JSON.parse(body))
   })
 })
 

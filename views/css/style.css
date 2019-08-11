@@ -1055,9 +1055,10 @@ SECTION MARGIN
                 ============================================================*/
 
 .navbar {
+    background-color:#fff;
     /*border-bottom: 1px solid #4a4bdb;*/
     /*background-color: #4a4bdb;*/
-    background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%);
+    /* background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%); */
 }
 
 .navbar .nav.navbar-nav {
@@ -1154,7 +1155,7 @@ SECTION MARGIN
     .navbar.top-nav-collapse {
         padding: 0;
         /*background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);*/
-        background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%);
+        /* background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%); */
         box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
     }
 
@@ -1444,7 +1445,7 @@ SECTION MARGIN
 
 .section-circle .shape-style-1.shape-primary {
     /*background: linear-gradient(155deg, rgba(20,193,133,1) 0%, rgba(74,75,219,1) 60%, rgba(74,75,219,1) 100%);*/
-    background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%);
+    /* background: linear-gradient(155deg, rgb(255, 255, 255) 0%, rgb(243, 243, 243) 60%, rgb(189, 189, 189) 100%); */
 }
 
 

@@ -4,7 +4,12 @@ const nodemailer = require('nodemailer');
 const compression = require('compression');
 const path = require('path');
 const request = require('request');
+const sslRedirect = require('heroku-ssl-redirect');
 const app = express();
+
+// enable ssl redirect
+app.use(sslRedirect());
+
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 

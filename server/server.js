@@ -29,6 +29,10 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get("*", function(request, response){
+  response.redirect("https://" + request.headers.host + request.url);
+});
+
 app.get('/',(req,res) =>{
 	res.render('index.html');
 });

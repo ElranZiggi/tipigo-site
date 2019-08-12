@@ -29,13 +29,7 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 app.get('/',(req,res) =>{
-  console.log("req.headers.host");
-  console.log(req.headers.host);
-  console.log("req.url");
-  console.log(req.url);
-  console.log("************HEREREREHEHRHERHEHREH")
   res.render('index.html');
 });
 

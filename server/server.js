@@ -29,16 +29,14 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("*", function(request, response){
-  response.redirect("https://" + request.headers.host + request.url);
-  console.log("request.headers.host");
-  console.log(request.headers.host);
-  console.log("request.url");
-  console.log(request.url);
-});
 
 app.get('/',(req,res) =>{
-	res.render('index.html');
+  console.log("req.headers.host");
+  console.log(req.headers.host);
+  console.log("req.url");
+  console.log(req.url);
+  console.log("************HEREREREHEHRHERHEHREH")
+  res.render('index.html');
 });
 
 

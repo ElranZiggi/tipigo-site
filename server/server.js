@@ -31,6 +31,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("*", function(request, response){
   response.redirect("https://" + request.headers.host + request.url);
+  console.log("request.headers.host");
+  console.log(request.headers.host);
+  console.log("request.url");
+  console.log(request.url);
 });
 
 app.get('/',(req,res) =>{

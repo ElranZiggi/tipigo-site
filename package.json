@@ -19,7 +19,7 @@
     "express-recaptcha": "^4.1.1",
     "hbs": "^4.0.4",
     "heroku-ssl-redirect": "0.0.4",
-    "mongodb": "^2.2.5",
+    "mongodb": "^3.1.13",
     "mongoose": "^4.5.9",
     "nodemailer": "^4.6.8",
     "path": "^0.12.7",

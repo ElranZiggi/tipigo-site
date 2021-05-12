@@ -21,7 +21,7 @@
     "heroku-ssl-redirect": "0.0.4",
     "mongodb": "^2.2.5",
     "mongoose": "^4.5.9",
-    "nodemailer": "^4.6.8",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7",
     "request": "^2.88.0"
   },
